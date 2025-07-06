@@ -1,5 +1,6 @@
-import React from 'react'
-import { useFetch } from '../Hooks/useFetch'
+import { useFetch } from '../Hooks/useFetch';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 export const CommentsComponent = () => {
 
@@ -10,7 +11,9 @@ export const CommentsComponent = () => {
       <h1>Listado de Comentarios</h1>
       <hr />
       {isLoading
-        ? <h5>Cargando...</h5>
+        ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+          <ClipLoader color="#36d7b7" loading={isLoading} size={50} />
+        </div>
         : errors
           ? <p>Ha ocurrido un error, {errors}</p>
           : <table className="table table-dark">
