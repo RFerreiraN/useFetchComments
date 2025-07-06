@@ -17,7 +17,6 @@ export const useFetch = (url) => {
         isLoading: false,
         errors: null
       })
-      console.log(data)
     } catch (error) {
       setComment({
         data: null,
@@ -28,7 +27,7 @@ export const useFetch = (url) => {
   }
 
   useEffect(() => {
-    if(!url) return
+    if (!url) return
     getFetch()
   }, [url])
 
