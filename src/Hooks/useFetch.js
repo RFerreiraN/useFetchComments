@@ -32,8 +32,8 @@ export const useFetch = (url) => {
   }, [url])
 
   return {
-    data: comment.data,
-    isLoading: comment.isLoading,
-    errors: comment.errors
+    data: comment.data, // Acá uardamos todo lo que viene de la API
+    isLoading: comment.isLoading, // Para mostrar algo mientras carga la pagina y llama a la API
+    errors: comment.errors // Manejo de errores 
   }
 }

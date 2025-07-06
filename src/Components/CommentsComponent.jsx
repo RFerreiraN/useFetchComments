@@ -11,8 +11,8 @@ export const CommentsComponent = () => {
       <h1>Listado de Comentarios</h1>
       <hr />
       {isLoading
-        ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-          <ClipLoader color="#36d7b7" loading={isLoading} size={50} />
+        ? <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
         : errors
           ? <p>Ha ocurrido un error, {errors}</p>
