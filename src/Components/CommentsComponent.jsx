@@ -12,7 +12,7 @@ export const CommentsComponent = () => {
       <hr />
       {isLoading
         ? <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+              <span class="visually-hidden">Loading...</span>
         </div>
         : errors
           ? <p>Ha ocurrido un error, {errors}</p>
